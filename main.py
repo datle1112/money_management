@@ -1,18 +1,9 @@
-from data_storage import Storage
-from models import Base, Category, Expense
-from data_parser import *
-from calculator import *
-
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 
 import sys
-from os import path
-import os
-import pprint
-
 from PyQt5.QtWidgets import QApplication
-from gui import Main_Window
+from src.gui import main_window
 
 """
 Version 1.0
@@ -60,7 +51,7 @@ def main():
 
     # GUI
     app = QApplication(sys.argv)
-    gui = Main_Window()
+    gui = main_window.Main_Window()
     gui.show()
 
     sys.exit(app.exec_())
